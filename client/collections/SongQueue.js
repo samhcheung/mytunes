@@ -18,12 +18,23 @@ var SongQueue = Backbone.Collection.extend({
       this.remove(this.at(0));
       //console.log('should set back index', this);
       if (this.length > 0) {
+
         this.playFirst();
       }
     }, this);
 
+    this.on('enqueue', function(e) {
+      console.log(e);
+      this.add(e);
+    }, this);
+
     this.on('dequeue', function(e) {
-      this.remove(this.at(e));
+      if ( JSON.stringify(this.at(0)) === JSON.stringify(e) ) {
+        console.log('whats HAPPENING?????');
+        e.ended();
+      } else {
+        this.remove(e);
+      }
       //console.log('should set back index', this);
     }, this);
 
