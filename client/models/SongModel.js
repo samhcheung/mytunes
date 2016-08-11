@@ -5,6 +5,7 @@ var SongModel = Backbone.Model.extend({
   initialize: function() {
     //this.on('ended')
   },
+  url: 'https://api.parse.com/1/classes/songs/',
   play: function() {
     // Triggering an event here will also trigger the event on the collection
     this.trigger('play', this);
@@ -17,7 +18,8 @@ var SongModel = Backbone.Model.extend({
   },
   ended: function () {
     this.trigger('ended', this);
-  }
+  },
+
 
 
 

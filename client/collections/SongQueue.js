@@ -14,7 +14,7 @@ var SongQueue = Backbone.Collection.extend({
     }, this);
 
     this.on('ended', function(e) {
-      console.log('does not run', e);
+      //console.log('does not run', e);
       this.remove(this.at(0));
       //console.log('should set back index', this);
       if (this.length > 0) {
