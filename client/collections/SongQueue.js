@@ -24,13 +24,13 @@ var SongQueue = Backbone.Collection.extend({
     }, this);
 
     this.on('enqueue', function(e) {
-      console.log(e);
+      console.log('what are you', e);
       this.add(e);
     }, this);
 
     this.on('dequeue', function(e) {
       if ( JSON.stringify(this.at(0)) === JSON.stringify(e) ) {
-        console.log('whats HAPPENING?????');
+        //console.log('whats HAPPENING?????');
         e.ended();
       } else {
         this.remove(e);
@@ -42,6 +42,8 @@ var SongQueue = Backbone.Collection.extend({
 
   playFirst: function() {
     this.at(0).play();
+    //var countPlusOne = this.model.get('playCount') + 1;
+    this.at(0).set('playCount', this.at(0).get('playCount')+1);
 
   }
 });

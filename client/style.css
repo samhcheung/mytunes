@@ -1,9 +1,24 @@
 body {
-  background-color: pink;
+  background-color: #003366;
   font-family: tahoma;
+  color: white;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px 60px;
 }
 
 .current {
+  background-color: #3399ff;
+}
 
-  background-color: red;
+td {
+  background-color: #3366cc;
+  padding: 5px;
+  border: solid #24478f;
+  border-width: 0 1px 1px 1px;
+  border-radius: 5px;
 }
