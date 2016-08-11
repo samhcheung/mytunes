@@ -7,14 +7,26 @@ var Songs = Backbone.Collection.extend({
   initialize: function() {
     var context = this;
     var mod = new SongModel();
-    mod.fetch( {
+
+    this.fetch(  {
       success: function() {
-        var result = mod.get('results'); 
-        result.forEach(function(elem) {
-          context.add(elem);
+        var newContent = context.at(0).get('results');
+        newContent.forEach(function(elem) {
+          context.add(new SongModel(elem));
         });
-      } 
+        context.remove(context.at(0));
+        //newSong = new SongModel(object);
+      }
     });
+    // mod.fetch( {
+    //   success: function() {
+    //     var result = mod.get('results'); 
+    //     result.forEach(function(elem) {
+    //       context.add(elem);
+    //     });
+    //    context.trigger('sync');
+    //   } 
+    // });
     //console.log(mod);
     //setTimeout(   function() {console.log( mod.get('results')) }   , 5000);
 
