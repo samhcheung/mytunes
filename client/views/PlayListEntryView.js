@@ -8,7 +8,18 @@ var PlayListEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
+  template: _.template('<td class="enqueue">(<%= artist %>)</td><td class="enqueue"><%= title %></td><td class="removeplaylist">Remove from<br>Playlist</td>'),
+  events: {
+    'click .enqueue': function() {
+      this.model.enqueue();
+    },
+    'click .removeplaylist': function() {
+      console.log('removeplaylist');
+      console.log(this.model);
+      this.model.removeFromPlaylist();
+    }
+  },
+
 
   initialize: function() {
 

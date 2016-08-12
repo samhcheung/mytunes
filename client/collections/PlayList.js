@@ -10,5 +10,10 @@ var PlayList = Backbone.Collection.extend({
       console.log('what is e????', e);
       this.add(e);
     });
+    this.on('removeFromPlaylist', function(e) {
+      // console.log('got into Playlist collection');
+      console.log('what is e????', e);
+      this.remove(e);
+    });    
   },
 });

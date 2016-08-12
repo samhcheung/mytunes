@@ -1,7 +1,7 @@
 body {
-  background-color: #003366;
+  background-color: #607980;
   font-family: tahoma;
-  color: white;
+  color: #1B373F;
   text-align: center;
 }
 
@@ -12,13 +12,33 @@ table {
 }
 
 .current {
-  background-color: #3399ff;
+  background-color: #1B373F;
 }
 
 td {
-  background-color: #3366cc;
+  background-color: #1B373F;
   padding: 5px;
-  border: solid #24478f;
-  border-width: 0 1px 1px 1px;
+  color: #607980;
+  border: solid #0E2A31;
+  border-width: 0 2px 2px 1px;
+  border-radius: 5px;
+}
+
+.submit {
+  background-color: #1B373F;
+  font-family: tahoma;
+  color: #607980;
+  border: solid #0E2A31;
+  border-width: 0.5px 2px 2px 1px;
+  border-radius: 5px;
+}
+
+.searchBar {
+  background-color: white;
+  font-family: tahoma;
+  width: 300px;
+  color: #1B373F;
+  border: solid #1B373F;
+  border-width: 0.5px 2px 2px 1px;
   border-radius: 5px;
 }
