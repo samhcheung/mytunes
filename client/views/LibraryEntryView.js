@@ -11,6 +11,8 @@ var LibraryEntryView = Backbone.View.extend({
     },
     'click .playlist': function() {
       console.log('playlist');
+      console.log(this.model);
+      this.model.addToPlaylist();
     }
   },
 
